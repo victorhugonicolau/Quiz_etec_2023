@@ -1,40 +1,43 @@
 <html>
-    <head>
-        <title>Quiz</title>
-    </head>
-    <body>
+
+<head>
+    <title>Quiz</title>
+</head>
+
+<body>
+    <div>
+        <span>Nível: A</span>
+        <span>Pontos: 0</span>
+        <span>Pulos: 0</span>
+        <span>Erros: 0</span>
+    </div>
+    <div>
+        <h3 id="pergunta">Quem descobriu o brasil?</h3>
+    </div>
+    <div>
         <div>
-            <span>Nível: A</span>            
-            <span>Pontos: 0</span>
-            <span>Pulos: 0</span>
-            <span>Erros: 0</span>
+            <input type="radio" name="resposta" value="1">
+            <label id="resposta01">Tião Gavião</label>
         </div>
         <div>
-            <h3>Quem descobriu o Brasil?</h3>
+            <input type="radio" name="resposta" value="2">
+            <labelid id="resposta02">Pero Vaz de Caminha </labelid>
         </div>
         <div>
-            <div>
-                <input type="radio"/>
-                <label>Tião Gavião</label>
-            </div>
-            <div>
-                <input type="radio"/>
-                <label>Napoleão</label>
-            </div>            
-            <div>
-                <input type="radio"/>
-                <label>Pedro Alvarez Cabral</label>
-            </div>
-            <div>
-                <input type="radio"/>
-                <label>Pero Vaz de Caminha</label>
-            </div>
+            <input type="radio" name="resposta" value="3">
+            <label id="resposta03">Pedro Álvares Cabral</label>
         </div>
-        <hr/>
         <div>
-            <button>Confirmar</button>
-            <button>Pular</button>
-            <button>Parar</button>
+            <input type="radio" name="resposta" value="4">
+            <label id="resposta04">Napoleão</label>
         </div>
-    </body>
+    </div>
+    <hr>
+    <div>
+        <button>Confirmar</button>
+        <button>Pular</button>
+        <button>Parar</button>
+    </div>
+</body>
+<script type="module" src="/assets/scripts/quiz.js"></script>
 </html>
