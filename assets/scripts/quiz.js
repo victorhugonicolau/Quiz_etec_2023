@@ -6,6 +6,17 @@ let qtdePontos= 0;
 let qtdePulos= 0;
 let qtdeErros= 0;
 
+//Placar
+let spanPulos = document.getElementById('spanPulos');
+
+//Botões
+let btnConfirmar = document.getElementById('bntConfirmar');
+let btnPular = document.getElementById('btnPular');
+btnPular.addEventListener('click', () => pular());
+let btnParar = document.getElementById('btnParar');
+btnParar.addEventListener('click', () => parar());
+
+//Perguntas e respostas
 let pergunta = document.getElementById('pergunta');
 let resposta01 = document.getElementById('resposta01');
 let resposta02 = document.getElementById('resposta02');
@@ -17,11 +28,27 @@ sortear();
 function sortear(){
     idxPergunta = Math.floor(Math.random() * perguntas.length);
 
-
     pergunta.innerHTML = perguntas[idxPergunta].PERGUNTA;
     resposta01.innerHTML = perguntas[idxPergunta].RESP1;
     resposta02.innerHTML = perguntas[idxPergunta].RESP2;
     resposta03.innerHTML = perguntas[idxPergunta].RESP3;
     resposta04.innerHTML = perguntas[idxPergunta].RESP4;
+}
 
+function pular() {
+    //qntdePulos = qntdePulos +1;
+    qtdePulos++;
+
+    if (qtdePulos == 3) {
+        btnPular.disabled = true;
+    }
+
+    spanPulos.innerText = `Pulos: ${qtdePulos}`;
+
+    sortear();
+}
+
+function parar() {
+    alert('Que pena, você desistiu!!!');
+    history.back();
 }

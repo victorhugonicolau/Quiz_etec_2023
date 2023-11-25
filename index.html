@@ -1,22 +1,23 @@
 <html>
+    <head>
+        <title>Quiz</title>
+    </head>
 
-<head>
-    <title>Quiz</title>
-</head>
-
-<body>
-    <!-- emmet -->
-    <h1>Quiz - 1H3</h1>
-    <p>Venha fazer parte dessa jogatina!!</p>
-    <button>Ciências</button>
-    <button>Geografia</button>
-    <button>Hístoria</button>
-    <button>Inglês</button>
-    <button>Matemática</button>
-    <button>Português</button>
-    <button>Variado</button>
-    
-    
-
-</body>
+    <body>
+        <!-- emmet -->
+        <h1>Quiz - 1H3</h1>
+        <p>Venha fazer parte dessa jogatina!!</p>
+        <button onclick="selecionarMateria('C')">Ciências</button>
+        <button onclick="selecionarMateria('G')">Geografia</button>
+        <button onclick="selecionarMateria('H')">Hístoria</button>
+        <button onclick="selecionarMateria('I')">Inglês</button>
+        <button onclick="selecionarMateria('M')">Matemática</button>
+        <button onclick="selecionarMateria('P')">Português</button>
+        <button onclick="selecionarMateria('V')">Variado</button>
+    </body>
+    <script>
+        function selecionarMateria(materia) {
+            alert(materia);
+        }
+    </script>
 </html>
